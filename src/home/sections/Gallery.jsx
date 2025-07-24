@@ -57,7 +57,7 @@ const MarqueeRow = ({ images, animation }) => (
 
 const Gallery = () => {
   return (
-    <div className="h-full w-full pt-12 text-white flex flex-col">
+    <div className="h-full w-full  text-white flex flex-col">
       <div className="w-fit relative px-max pb-14">
         {/* <h1 className="w-fit relative text-heading font-bebas-neue">
           <span className="relative text-neutral-900 z-10">Gallery</span>

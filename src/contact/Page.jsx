@@ -1,13 +1,19 @@
-import { ChevronLeft, ChevronRight, Instagram, Linkedin, YoutubeIcon } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Instagram,
+  Linkedin,
+  YoutubeIcon,
+} from "lucide-react";
 import React from "react";
 
 const Page = () => {
   return (
     <div className="min-h-screen h-full text-2xl w-full py-10 relative ">
       {/* main body */}
-      <div className="max-w-[100rem] mx-auto px-4 md:px-8 pb-36">
-        <div className="py-20 ">
-          <h1 className="text-8xl font-bebas-neue font-bold tracking-wide">
+      <div className="max-w-[100rem] mx-auto px-4 md:px-8 pb-6">
+        <div className="py-4 pb-20 md:py-20">
+          <h1 className="text-7xl md:text-8xl font-bebas-neue font-bold tracking-wide">
             The <span className="bg-blue-500 text-white px-2">community</span>{" "}
             you need, for the <span className="text--500">potential</span> you
             have.
@@ -56,24 +62,46 @@ const Page = () => {
               Submit
             </button>
 
-            <div className="font-inter bg-neutral-900 text-center py-8 mt-6 space-y-2 rounded-2xl">
-              <p className="text-xs md:text-sm uppercase font-wider text-neutral-400">Direct Email</p>
-              <p className="text-neutral-50" >acmxim@acm.org</p>
+            <div className="font-inter bg-neutral-900 text-center py-8 mt-2 md:mt-6 space-y-2 rounded-2xl">
+              <p className="text-xs md:text-sm uppercase font-wider text-neutral-400">
+                Direct Email
+              </p>
+              <p className="text-neutral-50">acmxim@acm.org</p>
             </div>
-            <div className="flex gap-4" >
-              <div className="h-full w-full bg-neutral-900 flex justify-center items-center py-10 size-30 rounded-2xl  cursor-pointer"><Instagram/></div>
-              <div className="h-full w-full bg-neutral-900 flex justify-center items-center py-10 size-30 rounded-2xl  cursor-pointer"><Linkedin/></div>
-              <div className="h-full w-full bg-neutral-900 flex justify-center items-center py-10 size-30 rounded-2xl  cursor-pointer"><YoutubeIcon/></div>
-
+            <div className="flex gap-4">
+              <div className="h-full w-full bg-neutral-900 flex justify-center items-center py-10 size-30 rounded-2xl  cursor-pointer">
+                <Instagram size={30} />
+              </div>
+              <div className="h-full w-full bg-neutral-900 flex justify-center items-center py-10 size-30 rounded-2xl  cursor-pointer">
+                <Linkedin size={30} />
+              </div>
+              <div className="h-full w-full bg-neutral-900 flex justify-center items-center py-10 size-30 rounded-2xl  cursor-pointer">
+                <YoutubeIcon size={30} />
+              </div>
             </div>
           </div>
 
           {/* contact image */}
+          <div className="w-full h-full flex items-center justify-center">
+            {/* You can add an image here if needed */}
+          </div>
         </div>
-      </div>
 
-      {/* footer */}
-      <FooterNavigation />
+        {/* Responsive Google Map */}
+        <div className="w-full py-16">
+          <div className="relative pb-[36.25%] h-0 overflow-hidden rounded-2xl">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3745.4226499848887!2d85.75987517518922!3d20.15812041711182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19af103360ec8f%3A0x734b96dc8afdf0ef!2sXIM%20University!5e0!3m2!1sen!2sin!4v1753384545780!5m2!1sen!2sin"
+              className="absolute top-0 left-0 w-full h-full border-0"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="XIM University Location"
+            ></iframe>
+          </div>
+        </div>
+        <FooterNavigation />
+      </div>
     </div>
   );
 };

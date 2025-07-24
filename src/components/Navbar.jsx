@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <motion.div
       style={{ opacity }}
-      className="w-full fixed px-max  h-22 flex items-center bg-neutral-50/0 z-[999] "
+      className="w-full fixed px-max h-18 md:h-22 flex items-center bg-neutral-50/0 z-[999] "
     >
       <div className="w-full max-w-[90rem] mx-auto flex justify-between gap-12 items-center relative">
         <a
