@@ -1,22 +1,45 @@
-import React from 'react'
-// import { scrollYProgress } from 'framer-motion'
+import { useRef } from "react";
+import { useScroll, useTransform, motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 const CallToAction = () => {
+	const CTARef = useRef(null);
+	const { scrollYProgress } = useScroll({
+		target: CTARef,
+		offset: ["end end", "start end"],
+	});
+	const rotate = useTransform(scrollYProgress, [0.12, 1], [0, -8]);
 
-  // const progressY = scrollYProgress();-
+	return (
+		<div
+			ref={CTARef}
+			className="h-full md:py-20 w-full mx-auto px-max "
+		>
+			<motion.div
+				style={{ rotate }}
+				className="bg-neutral-950 px-max font-semibold shadow-xl py-20 md:py-25  text-center relative rounded-2xl"
+			>
+				<h1 className=" md:leading-32 text-shadow-lg text-white text-5xl md:text-9xl font-bebas-neue">
+					Join the{" "}
+					<span className="text-yellow-400 cursor-pointer">
+						young
+					</span>{" "}
+					and <br /> <span className="text-blue-500">ambitious</span>{" "}
+					student chapter
+				</h1>
 
+				<p className="text-neutral-500 py-8 text-xs font-normal md:text-lg max-w-7xl mx-auto" >
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere dolorem expedita consectetur incidunt recusandae! Consequatur molestias, nesciunt reiciendis quaerat iusto deserunt culpa. Doloribus, libero. Minima earum recusandae, eveniet, alias qui voluptates explicabo distinctio aliquam laudantium facilis perspiciatis! Sapiente animi quidem dolorem ipsum totam nostrum nam illum non, nulla, laboriosam quos!
+				</p>
 
-  return (
-    <div className='h-full md:py-20 w-full max-w-[100rem] mx-auto px-max'>
-        <h1 className='bg-neutral-950 md:leading-32 text-white px-max font-semibold py-20 md:py-40 text-5xl md:text-9xl font-bebas-neue text-center md:-rotate-4 relative rounded-2xl'>
-          Join the <span className='text-yellow-400 cursor-pointer'>young</span> and <br /> <span className='text-blue-500' >ambitious</span> student chapter
+				<div className="flex justify-center mt-4 font-inter mx-auto bg-neutral-300 w-fit h-fit rounded-4xl relative">
+					<div className="w-fit text-neutral-800 font-normal bg-neutral-100 border-4 border-blue-500 hover:bg-blue-500 hover:text-neutral-100 rounded-4xl py-4 px-10 text-sm md:text-base cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out shadow-2xl">
+						Join Our Chapter{" "}
+					</div>
+				</div>
+			</motion.div>
+		</div>
+	);
+};
 
-          <div className=''>
-
-          </div>
-        </h1>        
-    </div>
-  )
-}
-
-export default CallToAction
+export default CallToAction;
