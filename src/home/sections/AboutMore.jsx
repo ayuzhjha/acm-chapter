@@ -6,12 +6,12 @@ const AboutMore = () => {
     <div className="py-6 pb-16 px-max flex flex-col gap-8 md:gap-20 mx-auto max-w-[100rem]">
 
       <div className="flex flex-col gap-4 md:gap-18 px-max ">
-        <h1 className="text-sm md:text-[2.1rem] md:leading-10 font-inter font-medium  text-neutral-800">
+          <h1 className="text-xs text-wrap md:text-[2.1rem] md:leading-10 font-inter font-medium  text-neutral-800">
           Beyond an technical club, ACM XIM is a hub for transversal collaboration,
           connecting diverse disciplines to bring new concepts to life and make
           an impact on how we live, design, build and grow.
         </h1>
-        <p className=" text-xs md:text-xl ml-auto text-right py-3 font-inter max-w-3xl text-neutral-600">
+        <p className=" text-[0.6rem] text-wrap md:text-xl ml-auto text-right py-3 font-inter max-w-3xl text-neutral-600">
           Our programmes are designed for those who want to break the mould.
           From radical architecture to self-sufficient design, we cover the
           subjects that matter, using the tools of tomorrow to build a better

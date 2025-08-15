@@ -13,18 +13,18 @@ const SideNavLinks = [
   { name: "Home", link: "/", img: "bg-red-500" },
   { name: "Events", link: "/events", img: "bg-blue-500" },
   { name: "Team", link: "/team", img: "bg-green-500" },
-  { name: "Projects", link: "/projects", img: "bg-stone-500" },
-  { name: "Gallery", link: "/gallery", img: "bg-purple-500" },
   { name: "Newsletter", link: "/newsletter", img: "bg-pink-500" },
+  { name: "Gallery", link: "/gallery", img: "bg-purple-500" },
   { name: "Contact Us", link: "/contact", img: "bg-lime-500" },
-  { name: "FAQ", link: "/faq", img: "bg-yellow-500" },
+  { name: "Membership", link: "/membership", img: "bg-stone-500" },
+  { name: "FAQs", link: "/faq", img: "bg-yellow-500" },
 ];
 
 const Socials = [
-  { icon: <LinkedinIcon />, hoverColor:"hover:text-sky-600" ,  link: "" },
-  { icon: <InstagramIcon />, hoverColor:"hover:text-pink-500" ,  link: "" },
-  { icon: <TwitterIcon />, hoverColor:"hover:text-blue-600" ,  link: "" },
-  { icon: <YoutubeIcon />, hoverColor:"hover:text-red-500" ,  link: "" },
+  { icon: <LinkedinIcon />, hoverColor: "hover:text-sky-600", link: "" },
+  { icon: <InstagramIcon />, hoverColor: "hover:text-pink-500", link: "" },
+  { icon: <TwitterIcon />, hoverColor: "hover:text-blue-600", link: "" },
+  { icon: <YoutubeIcon />, hoverColor: "hover:text-red-500", link: "" },
 ];
 
 function SideNavbar({ isOpen, setIsOpen }) {
@@ -44,25 +44,40 @@ function SideNavbar({ isOpen, setIsOpen }) {
 
   return (
     <div
-      className={`fixed top-0 w-full h-[calc(100vh)] bg-white backdrop-blur-sm py-1 ${
+      className={`fixed top-0 w-full h-full bg-white backdrop-blur-sm py-1 ${
         isOpen ? "left-0" : "left-[220dvw]"
       }  z-50 overflow-hidden flex flex-col justify-between transition-all ease-in-out duration-500 shadow-2xl/30 `}
     >
-      <div className=" w-full mx-auto flex flex-col gap-4 h-full items-start justify-between py-1 xl:py-2 3xl:py-4 px-4 sm:px-6">
-        <motion.div
-          layout
-          className={`w-full md:min-h-[55%] h-full  ${navImage} rounded-2xl mt-1 md:mt-2 relative`}
-        >
-          <X
-            onClick={() => {
-              setIsOpen(!isOpen);
-              setNavImage("bg-neutral-300");
-            }}
-            className=" size-12 md:size-10 lg:size-14 p-2 md:p-2 lg:p-3 bg-white absolute -top-1 right-0 rounded-bl-xl cursor-pointer"
-          />
+      <div className="relative w-full mx-auto flex flex-col gap-4 h-full items-start justify-between py-1 xl:py-2 3xl:py-4 px-4 sm:px-6">
+        <motion.div className="w-full md:min-h-[55%] h-full rounded-2xl mt-1 md:mt-2 relative">
+          <motion.div
+            layout
+            className={`hidden md:block ${navImage} rounded-2xl absolute inset-0`}
+          ></motion.div>
+          <div>
+            <button
+              className="font-inter right-0 absolute"
+              onClick={() => {
+                setIsOpen(!isOpen);
+                setNavImage("bg-neutral-300");
+              }}
+            >
+              {" "}
+              close{" "}
+            </button>
+            <span className="hidden md:block">
+              <X
+                onClick={() => {
+                  setIsOpen(!isOpen);
+                  setNavImage("bg-neutral-300");
+                }}
+                className=" size-12 md:size-10 lg:size-14 p-2 md:p-2 lg:p-3 bg-white absolute -top-1 right-0 rounded-bl-xl cursor-pointer"
+              />
+            </span>
+          </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 h-fit md:grid-cols-2 sm:gap-x-20 w-[90%] uppercase font-bold relative text-neutral-800/90">
+        <div className=" grid grid-cols-1 h-fit md:grid-cols-2 sm:gap-x-20 w-[90%] uppercase font-bold text-neutral-800/90">
           {SideNavLinks.map((link, index) => (
             <motion.a
               onMouseEnter={() => {
@@ -75,7 +90,7 @@ function SideNavbar({ isOpen, setIsOpen }) {
               transition={{ duration: 0.6, delay: 0.5 + 0.11 * index }}
               key={index}
               href={link.link}
-              className={`group flex p-1 xl:p-3 3xl:p-3 4xl:p-4 items-center relative text-2xl md:text-3xl lg:text-4xl xl:text-[2.5rem] 2xl:text-5xl 3xl:text-6xl w-fit ${
+              className={`group flex p-1 xl:p-3 3xl:p-3 4xl:p-4 items-center relative text-5xl md:text-3xl lg:text-4xl xl:text-[2.5rem] 2xl:text-5xl 3xl:text-6xl w-fit ${
                 hover
                   ? "md:hover:text-blue-600 md:text-neutral-500 hover:blur-none blur-[0.5px]"
                   : ""

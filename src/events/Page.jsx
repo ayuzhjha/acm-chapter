@@ -1,6 +1,6 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import React, { useEffect, useState } from 'react'
-import events from "../lib/eventsData";
+import events from "../lib/data/eventsData";
 
 const Page = () => {
   // console.log(events);

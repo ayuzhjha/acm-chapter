@@ -5,7 +5,7 @@ import Main from "./components/Main";
 
 const Page = () => {
   return (
-    <div className="bg-gradient-to-b from-blue-50 to-neutral-50 mx-auto px-max text-2xl w-full relative">
+    <div className="h-full bg-gradient-to-b from-blue-50 to-neutral-50 mx-auto px-max text-2xl w-full relative">
       <div className="max-w-[100rem] mx-auto">
         <Header />
         <Main />

@@ -1,24 +1,5 @@
 import React from "react";
-
-import img from "/src/assets/img.jpg";
-import img1 from "/src/assets/astro.jpg";
-import img2 from "/src/assets/img2.jpg";
-
-// Array of gallery rows with image and animation direction
-const galleryRows = [
-  {
-    images: [img],
-    animation: "marquee-right 60s linear infinite",
-  },
-  {
-    images: [img1],
-    animation: "marquee-left 60s linear infinite",
-  },
-  {
-    images: [img2],
-    animation: "marquee-right 70s linear infinite",
-  },
-];
+import { galleryRows } from "../../lib/data/galleryData";
 
 // MarqueeRow component for each row
 const MarqueeRow = ({ images, animation }) => (
@@ -30,44 +11,41 @@ const MarqueeRow = ({ images, animation }) => (
         animation,
       }}
     >
-      {Array.from({ length: 4 }).map((_, idx) =>
-        images.map((src, i) => (
-          <img
-            key={`img-${idx}-${i}`}
-            src={src}
-            className="h-80 aspect-video object-cover"
-            alt=""
-          />
-        ))
-      )}
-      {/* Duplicate for seamless loop */}
-      {Array.from({ length: 4 }).map((_, idx) =>
-        images.map((src, i) => (
-          <img
-            key={`img-dup-${idx}-${i}`}
-            src={src}
-            className="h-80 aspect-video object-cover"
-            alt=""
-          />
-        ))
-      )}
+      {/* Render images twice for seamless loop */}
+      {[...images, ...images].map((src, i) => (
+        <img
+          key={`img-${i}`}
+          src={src}
+          className="h-80 aspect-video object-cover "
+          alt=""
+        />
+      ))}
     </div>
   </div>
 );
 
 const Gallery = () => {
   return (
-    <div className="h-full w-full pt-12 text-white flex flex-col">
-      <div className="w-fit relative px-max pb-14">
+    <div className="h-full w-full text-white flex flex-col">
+      <div className="w-fit relative px-max ">
         {/* <h1 className="w-fit relative text-heading font-bebas-neue">
           <span className="relative text-neutral-900 z-10">Gallery</span>
           <span className="absolute bottom-0 left-0 h-1 w-full bg-blue-500 rounded-4xl"></span>
         </h1> */}
       </div>
 
-      {galleryRows.map((row, idx) => (
-        <MarqueeRow key={idx} images={row.images} animation={row.animation} />
-      ))}
+      <MarqueeRow
+        images={galleryRows.upper.images}
+        animation={galleryRows.upper.animation}
+      />
+      <MarqueeRow
+        images={galleryRows.middle.images}
+        animation={galleryRows.middle.animation}
+      />
+      <MarqueeRow
+        images={galleryRows.lower.images}
+        animation={galleryRows.lower.animation}
+      />
 
       <style>
         {`

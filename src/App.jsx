@@ -1,12 +1,13 @@
 import React from "react";
 import { Routes, Route } from "react-router";
+import Navbar from "./components/Navbar";
 import Home from "./home/Page";
 import Events from "./events/Page";
 import EventPage from "./events/EventPage";
 import Team from "./team/Page";
 import Gallery from "./gallery/Page";
 import Newsletter from "./newsletter/Page";
-import Navbar from "./components/Navbar";
+import Membership from "./membership/Page";
 import Contact from "./contact/Page";
 import ErrorPage from "./errorpage/Page"
 import Footer from "./home/sections/Footer";
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/events/:eventId" element={<EventPage />} />
         <Route path="/team" element={<Team />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/membership" element={<Membership />} />
         <Route path="/newsletter" element={<Newsletter />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/pagenotfound" element={<ErrorPage />} />

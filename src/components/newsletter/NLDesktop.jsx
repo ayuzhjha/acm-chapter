@@ -14,7 +14,7 @@ function Newsletter() {
   return (
     <div ref={targetRef} className="px-max mt-30 xl:mt-36 relative overflow-x-clip ">
       <span>
-      <UpcomingEventsHeader />
+      <NewsletterHeader />
       <motion.h1
         style={{ x, y }}
         className="absolute font-outline-4 font-bebas-neue -top-38 right-0 text-[14rem] italic text-neutral-50 whitespace-nowrap">
@@ -29,7 +29,7 @@ function Newsletter() {
   );
 }
 
-function UpcomingEventsHeader() {
+function NewsletterHeader() {
   return (
     <h1 className="font-bold w-fit font-bebas-neue text-shadow-xs text-heading relative z-10">
       <TextAnimate animation="blurIn" as="h1" by="character" delay={0.1}>

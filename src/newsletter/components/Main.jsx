@@ -3,7 +3,7 @@ import {
   categories,
   featured,
   otherNewsLetter,
-} from "../../lib/newsletterData";
+} from "../../lib/data/newsletterData";
 import { Search } from "lucide-react";
 import NL123 from "/src/assets/nl123.jpg";
 import W14 from "/src/assets/w14.jpg"

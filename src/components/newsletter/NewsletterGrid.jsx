@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import W14 from "/src/assets/w14.jpg"
 import { Link } from "react-router";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { otherNewsLetter } from "/src/lib/newsletterData.js"
+import { otherNewsLetter } from "/src/lib/data/newsletterData.js"
 import {motion} from "framer-motion"
 
 const Others = () => {

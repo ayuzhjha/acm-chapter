@@ -6,7 +6,7 @@ import { NavLink } from "react-router";
 const Footer = () => {
   return (
     <div className="">
-      <div className="mb-[calc(100vh-4.05rem)]"></div>
+      <div className="md:mb-[calc(100vh-4.05rem)]"></div>
 
       <div className="min-h-[calc(100vh-4rem)] grid grid-rows-6 w-full md:fixed bottom-0 bg-neutral-950 text-neutral-400/90 -z-10 px-max ">
         <div className="row-span-5 pt-4 border-y-2 border-neutral-800 px-max">
