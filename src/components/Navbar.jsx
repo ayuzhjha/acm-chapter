@@ -41,14 +41,14 @@ const Navbar = () => {
         {/* MIDDLE LINKS */}
         <div className=" hidden lg:flex py-4 px-10 bg-white backdrop-blur-lg rounded-4xl relative overflow-clip gap-6 -left-10 ">
           {Links.map((link, index) => (
-            <Link
+            <a
               key={index}
-              to={link.link}
+              href={link.link}
               className="group text-sm tracking-wide font-inter text-black/80 group transition ease-in-out duration-300 relative px-3"
             >
               {link.name}
               <motion.span className="absolute left-0 w-0 h-[1px] group-hover:w-full -bottom-4 bg-blue-500/90 transtition ease-in-out duration-300"></motion.span>
-            </Link>
+            </a>
           ))}
         </div>
         <NoticeBoard isOpen={isOpen} />
