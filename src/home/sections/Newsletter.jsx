@@ -5,7 +5,7 @@ import MobileDesktop from "../../components/newsletter/NLMobile";
 
 const Newsletter = () => {
   return (
-    <div className="min-h-screen h-full w-full">
+    <div className="h-full w-full">
       <div className="hidden md:block">
         <DesktopComponent />
       </div>

@@ -21,13 +21,16 @@ export default function AboutSection() {
           className="h-1 bg-red-500 hidden lg:block rounded-full absolute inset-y-0 my-auto right-30 md:right-60"
         />
       </h1>
-      <p className="text-sm text-balance md:text-lg xl:text-xl 2xl:text-2xl font-medium md:leading-9 max-w-[89rem] px-max font-inter mx-auto text-center text-black/70">
+      <p className="text-lg md:text-lg xl:text-xl 2xl:text-2xl font-medium md:leading-9 max-w-[89rem] px-max font-inter mx-auto text-center text-wrap text-black/70">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
         doloremque deleniti iste eaque enim voluptatem, ratione est? Sapiente
         eos, earum beatae, temporibus consequuntur unde ad maxime eius corrupti
-        velit soluta <br /> magni dolorum quaerat voluptatibus dolorem mollitia,
-        praesentium totam commodi itaque? <br /> Adipisci pariatur magnam nihil quidem
+        velit soluta  magni dolorum quaerat voluptatibus dolorem mollitia,
+        praesentium totam commodi itaque Adipisci pariatur magnam nihil quidem
         officia reiciendis eaque sit soluta.
+        <span className="hidden md:block">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente        
+        </span>
       </p>
       <div className="relative w-full 2xl:mt-6">
         <img
@@ -36,7 +39,7 @@ export default function AboutSection() {
           className="object-cover h-full w-full shadow-xl"
           style={{ backgroundPosition: "bottom" }}
         />
-        <div className="absolute inset-0  bg-gradient-to-b from-neutral-50 via-neutral-50/0 to-neutral-50/5 w-full z-200"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-neutral-50 via-neutral-50/0 to-neutral-50/5 w-full z-200"></div>
       </div>
     </div>
   );

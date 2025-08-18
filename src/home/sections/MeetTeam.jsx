@@ -2,11 +2,8 @@ import React from 'react'
 
 const MeetTeam = () => {
   return (
-    <div className='min-h-screen text-2xl w-full p-10'>
-      <h1>MeetTeam</h1>
-    
-    
-    
+    <div className='text-2xl w-full px-max'>
+      <h1>MeetTeam (under developement)</h1>
     </div>
   )
 }
