@@ -91,9 +91,9 @@ function NoticeBoard({ isOpen }) {
     >
       <div className="w-fit bg-black relative">
         <motion.div className="flex items-center justify-around p-1  lg:px-3">
-          <h1 className="text-white/95 text-xs text-center p-1 relative ">
+          <a href='/newsletter' className="text-white/95 text-xs text-center p-1 relative ">
             Checkout our newsletter
-          </h1>
+          </a>
           <ArrowRight
             color="white"
             size={18}

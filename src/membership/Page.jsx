@@ -10,7 +10,7 @@ const Page = () => {
       <div className="max-w-[100rem] mx-auto h-full pb-40">
         <Header />
         <Main />
-        <hr />
+        {/* <hr /> */}
         <FAQ />
       </div>
 
