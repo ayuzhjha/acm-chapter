@@ -1,30 +1,13 @@
 import React, { useRef } from "react";
-import arco from "/src/assets/arco.jpg";
-import mario from "/src/assets/mario.jpg";
+
 import { motion, useScroll, useTransform } from "framer-motion";
 import { TextAnimate } from "./magicui/TextAnimate";
 import { BlurFade } from "./magicui/BlurFade";
 import { ArrowUpRight } from "lucide-react";
 
 // 1. List of event objects
-const events = [
-  {
-    id: 1,
-    image: arco,
-    title: "OMG! Arco is here!",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum neque esse alias impedit mollitia fugit quaerat nihil aliquam.",
-    delay: 0.3,
-  },
-  {
-    id: 2,
-    image: mario,
-    title: "Marco Polo Mario",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum neque esse alias impedit mollitia fugit quaerat nihil aliquam.",
-    delay: 0.45,
-  },
-];
+import {UpcomingEventsData} from "../lib/data/landing-page/events.data";
+
 
 // 2. Main UpcomingEvents component
 export default function UpcomingEvents() {
@@ -44,7 +27,7 @@ export default function UpcomingEvents() {
         Upcoming events
       </motion.h1>
 
-      <UpcomingEventList events={events} />
+      <UpcomingEventList events={UpcomingEventsData} />
     </div>
   );
 }

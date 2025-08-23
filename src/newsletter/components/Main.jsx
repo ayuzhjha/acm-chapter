@@ -3,11 +3,9 @@ import {
   categories,
   featured,
   otherNewsLetter,
-} from "../../lib/data/newsletterData";
+} from "../../lib/data/newsletter.global.data";
 import { Search } from "lucide-react";
-import NL123 from "/src/assets/nl123.jpg";
-import W14 from "/src/assets/w14.jpg"
-import Star from "/src/assets/star.jpg"
+
 
 const Main = () => {
   const [current, setCurrent] = useState(0);
@@ -55,7 +53,7 @@ const Featured = () => {
     <div className="flex flex-col lg:flex-row font-inter">
       <div className="w-full rounded-2xl p-3 md:p-5 flex flex-col md:flex-row gap-8 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] cursor-pointer bg-neutral-50/55">
         <img
-          src={NL123}
+          src={featured.img}
           alt="poster-image"
           className="h-60 xl:h-96 3xl:h-[30rem] max-w-screen rounded-2xl md:rounded-l-2xl object-cover"
         />
@@ -90,7 +88,7 @@ const AllNewsletters = () => {
     <div className="py-16 grid grid-cols-1 md:grid-cols-2 gap-10">
       {otherNewsLetter.map((item, i) => (
         <div key={i} className=" flex font-inter flex-col gap-8 p-3 pb-10 md:p-7 hover:bg-neutral-50/20 rounded-2xl hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-b md:border-0 border-neutral-300 cursor-pointer" >
-            <img src={Star} alt="poster" className="rounded-xl overflow-clip max-w-screen" />
+            <img src={item.img} alt="poster" className="rounded-xl overflow-clip max-w-screen" />
             <div className="flex flex-col gap-5" >
                 <div className="text-xs md:text-base">
                     <span>{item.tags}</span><span className="text-neutral-500"> <span className="text-xs " >&bull;</span> {item.date}</span>

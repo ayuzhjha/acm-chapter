@@ -1,31 +1,10 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Link, NavLink } from "react-router";
+import { X } from "lucide-react";
 import {
-	InstagramIcon,
-	X,
-	LinkedinIcon,
-	TwitterIcon,
-	YoutubeIcon,
-} from "lucide-react";
-
-const SideNavLinks = [
-	{ name: "Home", link: "/", img: "bg-red-500" },
-	{ name: "Events", link: "/events", img: "bg-blue-500" },
-	{ name: "Team", link: "/team", img: "bg-green-500" },
-	{ name: "Newsletter", link: "/newsletter", img: "bg-pink-500" },
-	{ name: "Gallery", link: "/gallery", img: "bg-purple-500" },
-	{ name: "Contact Us", link: "/contact", img: "bg-lime-500" },
-	{ name: "Membership", link: "/membership", img: "bg-stone-500" },
-	{ name: "FAQs", link: "/faq", img: "bg-yellow-500" },
-];
-
-const Socials = [
-	{ icon: <LinkedinIcon />, hoverColor: "hover:text-sky-600", link: "" },
-	{ icon: <InstagramIcon />, hoverColor: "hover:text-pink-500", link: "" },
-	{ icon: <TwitterIcon />, hoverColor: "hover:text-blue-600", link: "" },
-	{ icon: <YoutubeIcon />, hoverColor: "hover:text-red-500", link: "" },
-];
+	SideNavLinks,
+	Socials,
+} from "../lib/data/landing-page/sideNavbar.data";
 
 function SideNavbar({ isOpen, setIsOpen }) {
 	const [navImage, setNavImage] = useState("bg-neutral-300");
@@ -107,14 +86,14 @@ function SideNavbar({ isOpen, setIsOpen }) {
 			</div>
 
 			<div className="absolute hidden  right-0 -bottom-1 lg:flex item-center gap-6 p-4 xl:px-6 rounded-tl-3xl bg-neutral-100">
-				{Socials.map((icon, i) => (
+				{Socials.map((item, i) => (
 					<motion.a
 						whileHover={{ y: -4 }}
 						key={i}
-						className={`${icon.hoverColor} size-12 xl:size-14 rounded-full flex justify-center items-center shadow-md/30 hover:shadow-lg/30 relative ease-in-out cursor-pointer`}
-						href={icon.link}
+						className={`${item.hoverColor} size-12 xl:size-14 rounded-full flex justify-center items-center shadow-md/30 hover:shadow-lg/30 relative ease-in-out cursor-pointer`}
+						href={item.link}
 					>
-						{icon.icon}
+						<item.icon />
 					</motion.a>
 				))}
 			</div>

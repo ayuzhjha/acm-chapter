@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import W14 from "/src/assets/w14.jpg"
+
 import { Link } from "react-router";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { otherNewsLetter } from "/src/lib/data/newsletterData.js"
+import { otherNewsLetter } from "/src/lib/data/newsletter.global.data"
 import {motion} from "framer-motion"
 
 const Others = () => {
@@ -31,7 +31,7 @@ const Others = () => {
             className="border hover:shadow-lg border-neutral-200 rounded-2xl p-4 h-full flex flex-col gap-5 cursor-pointer"
           >
             <img
-              src={W14}
+              src={blog.img}
               alt="poster-image"
               className="rounded-2xl h-full object-cover"
             />

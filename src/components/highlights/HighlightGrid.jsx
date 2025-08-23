@@ -10,45 +10,7 @@ import {
 } from "lucide-react";
 import React from "react";
 import { NavLink } from "react-router";
-
-const GridDetails = [
-  {
-    number: "100+",
-    title: "Members",
-    link: {
-      to: "/team",
-      text: "Explore Team",
-    },
-    icons: "Users",
-  },
-  {
-    number: "50+",
-    title: "Events",
-    link: {
-      to: "/events",
-      text: "Explore Events",
-    },
-    icons: "Calendar",
-  },
-  {
-    number: "12+",
-    title: "Projects",
-    link: {
-      to: "/projects",
-      text: "Explore Projects",
-    },
-    icons: "Lightbulb",
-  },
-  {
-    number: "10+",
-    title: "Workshops",
-    link: {
-      to: "/workshops",
-      text: "Explore Workshops",
-    },
-    icons: "Microscope",
-  },
-];
+import {HighlightsBottomGridData} from "../../lib/data/landing-page/about-and-highlights.data"
 
 const HighlightGrid = () => {
   return (
@@ -78,7 +40,7 @@ const HighlightGrid = () => {
       </div>
 
       <div className="h-full w-full grid grid-cols-2 md:grid-cols-4 gap-4 px-max">
-        {GridDetails.map((item, index) => (
+        {HighlightsBottomGridData.map((item, index) => (
           <div
             key={index}
             className="bg-neutral-100  flex flex-col justify-between gap-8 md:gap-16 p-4 md:p-12 relative "

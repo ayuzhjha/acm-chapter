@@ -11,7 +11,7 @@ import {
   Clock,
   ArrowLeft,
 } from "lucide-react";
-import events from "../lib/data/eventsData";
+import events from "../lib/data/events.global.data";
 
 export default function EventPage() {
   const { eventId } = useParams();

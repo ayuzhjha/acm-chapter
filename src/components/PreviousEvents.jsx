@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { TextAnimate } from "./magicui/TextAnimate";
 import { BlurFade } from "./magicui/BlurFade";
 import { ArrowRight, ArrowUpRight, Calendar } from "lucide-react";
+import {PreviousEventsData} from "../lib/data/landing-page/events.data"
 
 export default function HorizontalScroll() {
   const targetRef = useRef(null);
@@ -21,7 +22,7 @@ export default function HorizontalScroll() {
           style={{ x }}
           className="relative top-10 flex gap-7 3xl:gap-16 h-full w-[100vw] my-10 lg:my-16 2xl:my-20"
         >
-          {PastEvents.map((event, i) => (
+          {PreviousEventsData.map((event, i) => (
             <BlurFade key={i} inView>
               <motion.div
                 key={i}
@@ -95,67 +96,3 @@ function PreviousEventsHeader() {
     </div>
   );
 }
-
-const PastEvents = [
-  {
-    image: "/src/assets/astro.jpg",
-    title: "The Legend of Zelda",
-    description:
-      "An epic adventure in the world of Hyrule. Join Link as he battles Ganon to save Princess Zelda.",
-    date: "30 Feb 2023",
-  },
-  {
-    image: "/src/assets/savage.jpg",
-    title: "Super Mario",
-    description:
-      "An epic adventure in the world of Hyrule. Join Link as he battles Ganon to save Princess Zelda.",
-
-    date: "15 Mar 2023",
-  },
-  {
-    image: "/src/assets/img.jpg",
-    title: "Call of Duty",
-    description:
-      "An epic adventure in the world of Hyrule. Join Link as he battles Ganon to save Princess Zelda.",
-
-    date: "20 Apr 2023",
-  },
-  {
-    image: "/src/assets/img1.jpg",
-    title: "Pokémon",
-    description:
-      "An epic adventure in the world of Hyrule. Join Link as he battles Ganon to save Princess Zelda.",
-
-    date: "10 May 2023",
-  },
-  {
-    image: "/src/assets/img2.jpg",
-    title: "Final Fantasy",
-    description:
-      "An epic adventure in the world of Hyrule. Join Link as he battles Ganon to save Princess Zelda.",
-
-    date: "25 Jun 2023",
-  },
-  {
-    image: "/src/assets/img3.jpg",
-    title: "Minecraft",
-    description:
-      "An epic adventure in the world of Hyrule. Join Link as he battles Ganon to save Princess Zelda.",
-
-    date: "05 Jul 2023",
-  },
-  {
-    image: "/src/assets/arco.jpg",
-    title: "Grand Theft Auto",
-    description:
-      "An epic adventure in the world of Hyrule. Join Link as he battles Ganon to save Princess Zelda.",
-    date: "18 Aug 2023",
-  },
-  {
-    image: "/src/assets/astro.jpg",
-    title: "Counter-Strike",
-    description:
-      "An epic adventure in the world of Hyrule. Join Link as he battles Ganon to save Princess Zelda.",
-    date: "01 Nov 2023",
-  },
-];

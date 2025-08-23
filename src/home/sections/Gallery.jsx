@@ -1,5 +1,5 @@
 import React from "react";
-import { galleryRows } from "../../lib/data/galleryData";
+import { galleryRows } from "../../lib/data/gallery.global.data.js";
 
 // MarqueeRow component for each row
 const MarqueeRow = ({ images, animation }) => (

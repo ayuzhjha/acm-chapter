@@ -1,8 +1,10 @@
-import { desc } from "framer-motion/client";
+import NL123 from "/src/assets/nl123.jpg";
+import W14 from "/src/assets/w14.jpg"
+import Star from "/src/assets/star.jpg"
 
 const featured = {
   title: "Jun 2025: Federated Learning Ecosystem Momentum Surges",
-  img: "",
+  img: NL123,
   tags: "Research",
   description:
     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt velit incidunt quas voluptatem molestiae dolorem minima neque libero necessitatibus cumque ullam unde nam, magnam voluptas! Eveniet ipsa possimus pariatur provident?",
@@ -12,7 +14,7 @@ const featured = {
 const otherNewsLetter = [
   {
     title: "Is ecosystem moving from Tensorflow to PyTorch?",
-    img: "",
+    img: W14,
     tags: "Developer",
     tagColor: "bg-blue-200",
     description:
@@ -21,7 +23,7 @@ const otherNewsLetter = [
   },
   {
     title: "Federated Learning: Privacy Meets Performance",
-    img: "",
+    img: Star,
     tags: "Research",
     tagColor: "bg-violet-200",
     description:
@@ -30,7 +32,7 @@ const otherNewsLetter = [
   },
   {
     title: "Open Source AI: Collaboration Driving Innovation",
-    img: "",
+    img: W14,
     tags: "Community",
     tagColor: "bg-green-200",
     description:
@@ -39,7 +41,7 @@ const otherNewsLetter = [
   },
   {
     title: "Edge AI: Bringing Intelligence Closer to Devices",
-    img: "",
+    img: Star,
     tags: "Research",
     tagColor: "bg-violet-200",
     description:
@@ -48,7 +50,7 @@ const otherNewsLetter = [
   },
   {
     title: "AI Regulation: What Developers Need to Know",
-    img: "",
+    img: W14,
     tags: "Developer",
     tagColor: "bg-blue-200",
     description:
@@ -57,7 +59,7 @@ const otherNewsLetter = [
   },
   {
     title: "Scaling ML Models: Best Practices for Production",
-    img: "",
+    img: Star,
     tags: "Developer",
     tagColor: "bg-blue-200",
     description:
@@ -67,7 +69,7 @@ const otherNewsLetter = [
   // Additional Developer
   {
     title: "JavaScript for AI: New Libraries in 2025",
-    img: "",
+    img: W14,
     tags: "Developer",
     tagColor: "bg-blue-200",
     description:
@@ -77,7 +79,7 @@ const otherNewsLetter = [
   // Additional Research
   {
     title: "Quantum Machine Learning: The Next Frontier",
-    img: "",
+    img: Star,
     tags: "Research",
     tagColor: "bg-violet-200",
     description:
@@ -87,7 +89,7 @@ const otherNewsLetter = [
   // Additional Education
   {
     title: "AI Bootcamps: Accelerating Learning for All",
-    img: "",
+    img: W14,
     tags: "Education",
     tagColor: "bg-yellow-200",
     description:
@@ -96,7 +98,7 @@ const otherNewsLetter = [
   },
   {
     title: "Teaching AI Ethics in Schools",
-    img: "",
+    img: Star,    
     tags: "Education",
     tagColor: "bg-yellow-200",
     description:
@@ -106,7 +108,7 @@ const otherNewsLetter = [
   // Additional Community
   {
     title: "Women in AI: Breaking Barriers Together",
-    img: "",
+    img: W14,
     tags: "Community",
     tagColor: "bg-green-200",
     description:
@@ -115,7 +117,7 @@ const otherNewsLetter = [
   },
   {
     title: "Global AI Meetups: Connecting Innovators",
-    img: "",
+    img: Star,
     tags: "Community",
     tagColor: "bg-green-200",
     description:

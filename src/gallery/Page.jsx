@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { ArrowDown, ChevronLeft, ChevronRight, House } from "lucide-react";
-import { galleryDragables, galleryGrid } from "../lib/data/galleryData";
+import { galleryDragables, galleryGrid } from "../lib/data/gallery.global.data.js";
 
 // Card data array
 
