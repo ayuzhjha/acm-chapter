@@ -1,6 +1,7 @@
 // About Us 
-export const AboutUs =	"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloremque deleniti iste eaque enim voluptatem, ratione est? Sapiente eos, earum beatae, temporibus consequuntur unde ad maxime eius corrupti velit soluta magni dolorum quaerat voluptatibus dolorem mollitia, praesentium totam commodi itaque Adipisci pariatur magnam nihil quidem 	officia reiciendis eaque sit soluta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente";
+export const AboutUs =	"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus libero adipisci sunt tempora veritatis voluptate, possimus incidunt laboriosam laudantium. Eligendi impedit illum eum omnis tempora ipsam laborum. Odit veritatis nemo accusantium assumenda voluptates? Impedit, fugiat itaque! Optio quaerat assumenda obcaecati distinctio nemo autem aut tempore explicabo praesentium vel ipsum dolor consequatur molestias rerum ad laboriosam ex possimus, eveniet consectetur quibusdam placeat? Alias, pariatur amet dignissimos ipsam molestiae consequuntur, id harum velit nemo ";
 export const TeamPhoto = "https://i.ibb.co/V95MszS/xim-acm.jpg";
+
 
 // More About Us 
 export const MoreAbout = [

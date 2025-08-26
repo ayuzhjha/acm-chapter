@@ -8,7 +8,7 @@ import img2 from "/src/assets/img2.jpg";
 import img3 from "/src/assets/img3.jpg";
 
 
-
+// * Upcoming Events
 export const UpcomingEventsData = [
 	{
 		id: 1,
@@ -30,6 +30,9 @@ export const UpcomingEventsData = [
 
 export const UpcomingEventsDataMobile = [arco, mario];
 
+
+
+// * Previous Events
 export const PreviousEventsData = [
 	{
 		image: astro,

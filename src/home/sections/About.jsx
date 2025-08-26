@@ -30,7 +30,7 @@ export default function AboutSection() {
 					className="h-1 bg-red-500 hidden lg:block rounded-full absolute inset-y-0 my-auto right-30 md:right-60"
 				/>
 			</h1>
-			<p className="text-lg md:text-lg xl:text-xl 2xl:text-2xl font-medium md:leading-9 max-w-[85rem] px-max font-inter mx-auto text-center text-wrap text-black/70">
+			<p className="text-lg md:text-lg xl:text-xl 2xl:text-2xl max-w-[80rem] px-max font-inter mx-auto text-center text-wrap text-black/60">
 				{AboutUs}
 			</p>
 			<div className="relative w-full 2xl:mt-6">

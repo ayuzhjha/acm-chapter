@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { X } from "lucide-react";
@@ -23,11 +24,11 @@ function SideNavbar({ isOpen, setIsOpen }) {
 
 	return (
 		<div
-			className={`fixed top-0 w-full h-full bg-white backdrop-blur-sm py-1 ${
+			className={`fixed top-0 w-full h-full bg-white backdrop-blur-sm  ${
 				isOpen ? "left-0" : "left-[220dvw]"
 			}  z-50 overflow-hidden flex flex-col justify-between transition-all ease-in-out duration-500 shadow-2xl/30 `}
 		>
-			<div className="relative w-full mx-auto flex flex-col gap-4 h-full items-start justify-between py-1 xl:py-2 3xl:py-4 px-4 sm:px-6">
+			<div className="relative w-full mx-auto flex flex-col gap-4 h-full items-start justify-between py-1 xl:py-2 3xl:py-3 px-4 sm:px-6">
 				<motion.div className="w-full md:min-h-[55%] h-full rounded-2xl mt-1 md:mt-2 relative">
 					<motion.div
 						layout
@@ -50,7 +51,7 @@ function SideNavbar({ isOpen, setIsOpen }) {
 									setIsOpen(!isOpen);
 									setNavImage("bg-neutral-300");
 								}}
-								className=" size-12 md:size-10 lg:size-14 p-2 md:p-2 lg:p-3 bg-white absolute -top-1 right-0 rounded-bl-xl cursor-pointer"
+								className=" size-12 md:size-10 lg:size-14 p-2 md:p-2 lg:p-3 bg-white absolute -top-1 -right-0.5 rounded-bl-xl cursor-pointer"
 							/>
 						</span>
 					</div>

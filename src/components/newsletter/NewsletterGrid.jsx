@@ -28,12 +28,12 @@ const Others = () => {
         {otherNewsLetter.slice(current, current + visibleCount).map((blog, i) => (
           <div
             key={current + i}
-            className="border hover:shadow-lg border-neutral-200 rounded-2xl p-4 h-full flex flex-col gap-5 cursor-pointer"
+            className="border h-full hover:shadow-lg border-neutral-200 rounded-2xl p-4 flex flex-col gap-5 cursor-pointer"
           >
             <img
               src={blog.img}
               alt="poster-image"
-              className="rounded-2xl h-full object-cover"
+              className="rounded-2xl  object-cover"
             />
             <div className="flex flex-col justify-between gap-10">
               <div className="flex flex-col gap-3">
@@ -42,7 +42,7 @@ const Others = () => {
                 >
                   {blog.tags}
                 </div>
-                <h1 className="text-2xl">{blog.title}</h1>
+                <h1 className="text-xl">{blog.title}</h1>
               </div>
               <p>{blog.date}</p>
             </div>

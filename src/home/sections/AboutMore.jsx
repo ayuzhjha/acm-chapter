@@ -4,12 +4,12 @@ import {MoreAbout} from "../../lib/data/landing-page/about-and-highlights.data"
 const AboutMore = () => {
   return (
     
-    <div className="py-10 pb-16 px-max flex flex-col gap-8 md:gap-20 mx-auto max-w-[100rem]">
-      <div className="flex flex-col gap-4 md:gap-18 px-max ">
+    <div className="py-6 pb-16 px-max flex flex-col gap-8 xl:gap-20 mx-auto max-w-[100rem]">
+      <div className="flex flex-col gap-4 lg:gap-14 px-max ">
           <h1 className="text-xl text-wrap md:text-[2.1rem] md:leading-10 font-inter font-medium  text-neutral-800">
           {MoreAbout[0]}
         </h1>
-        <p className=" text-md text-wrap md:text-xl ml-auto text-right py-3 font-inter max-w-3xl text-neutral-600">
+        <p className=" text-md text-wrap md:text-xl ml-auto text-right font-inter max-w-3xl text-neutral-600">
           {MoreAbout[1]}
         </p>
       </div>
