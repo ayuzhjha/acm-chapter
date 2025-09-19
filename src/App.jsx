@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router";
 import Navbar from "./components/Navbar";
-import Home from "./home/Page";
+import Home from "./landing/page.jsx";
 import Events from "./events/Page";
 import EventPage from "./events/EventPage";
 import Team from "./team/Page";
@@ -10,7 +10,7 @@ import Newsletter from "./newsletter/Page";
 import Membership from "./membership/Page";
 import Contact from "./contact/Page";
 import ErrorPage from "./errorpage/Page"
-import Footer from "./home/sections/Footer";
+import Footer from "./landing/sections/Footer";
 
 const App = () => {
   return (

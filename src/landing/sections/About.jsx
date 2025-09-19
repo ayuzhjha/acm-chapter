@@ -3,7 +3,7 @@ import {TeamPhoto, AboutUs } from "../../lib/data/landing-page/about-and-highlig
 
 export default function AboutSection() {
 	return (
-		<div className=" bg-neutral-50 relative flex flex-col gap-8 md:gap-14 py-10 xl:py-20">
+		<div className=" bg-neutral-50 relative flex flex-col gap-8 md:gap-8 py-10 xl:py-20">
 			<h1 className="text-5xl md:text-7xl w-fit mx-auto font-bebas-neue font-black text-black/85 text-shadow-xs relative text-center">
 				<motion.span
 					initial={{ width: 0 }}
@@ -30,7 +30,7 @@ export default function AboutSection() {
 					className="h-1 bg-red-500 hidden lg:block rounded-full absolute inset-y-0 my-auto right-30 md:right-60"
 				/>
 			</h1>
-			<p className="text-lg md:text-lg xl:text-xl 2xl:text-2xl max-w-[80rem] px-max font-inter mx-auto text-center text-wrap text-black/60">
+			<p className="text-sm md:text-base xl:text-lg  max-w-7xl px-max font-inter  mx-auto text-center text-pretty text-neutral-700">
 				{AboutUs}
 			</p>
 			<div className="relative w-full 2xl:mt-6">

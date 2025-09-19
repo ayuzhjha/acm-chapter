@@ -1,6 +1,7 @@
 import NL123 from "/src/assets/nl123.jpg";
 import W14 from "/src/assets/w14.jpg"
 import Star from "/src/assets/star.jpg"
+import Snoppy from "/src/assets/snoppy1.jpg"
 
 const featured = {
   title: "Jun 2025: Federated Learning Ecosystem Momentum Surges",
@@ -14,7 +15,7 @@ const featured = {
 const otherNewsLetter = [
   {
     title: "Is ecosystem moving from Tensorflow to PyTorch?",
-    img: W14,
+    img: Snoppy,
     tags: "Developer",
     tagColor: "bg-blue-200",
     description:
@@ -23,7 +24,7 @@ const otherNewsLetter = [
   },
   {
     title: "Federated Learning: Privacy Meets Performance",
-    img: Star,
+    img: Snoppy,
     tags: "Research",
     tagColor: "bg-violet-200",
     description:
@@ -32,7 +33,7 @@ const otherNewsLetter = [
   },
   {
     title: "Open Source AI: Collaboration Driving Innovation",
-    img: W14,
+    img: Snoppy,
     tags: "Community",
     tagColor: "bg-green-200",
     description:

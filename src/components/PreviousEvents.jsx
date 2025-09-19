@@ -14,13 +14,13 @@ export default function HorizontalScroll() {
 
   return (
     <div ref={targetRef} className="relative h-[600vh]">
-      <div className="sticky flex flex-col 4xl:gap-40 justify-between h-[100dvh] top-8 py-16 2xl:py-20 4xl:py-30 overflow-hidden ">
+      <div className="sticky flex flex-col 4xl:gap-40 justify-between h-[100dvh] top-2 py-16 2xl:py-20 4xl:py-30 overflow-hidden ">
         {/* title */}
         <PreviousEventsHeader />
         {/* List of events */}
         <motion.div
           style={{ x }}
-          className="relative top-10 flex gap-7 3xl:gap-16 h-full w-[100vw] my-10 lg:my-16 2xl:my-20"
+          className="relative top-6 flex gap-7 3xl:gap-16 h-full w-[100vw] my-10 "
         >
           {PreviousEventsData.map((event, i) => (
             <BlurFade key={i} inView>
@@ -28,7 +28,7 @@ export default function HorizontalScroll() {
                 key={i}
                 whileHover={{ y: -15 }}
                 animate={{x: 150 }}
-                className={`w-full h-full max-h-[60rem] relative aspect-video cursor-pointer group  `}
+                className={`w-full h-full max-h-[60rem] relative aspect-video cursor-pointer group `}
               >
                 <img
                   src={event.image}
@@ -50,7 +50,7 @@ export default function HorizontalScroll() {
                       {event.date}
                     </p>
                   </div>
-                  <p className=" text-xs lg:text-sm mt-0.5 2xl:text-base text-neutral-600/90 hidden group-hover:block">
+                  <p className=" text-xs lg:text-xs mt-0.5 2xl:text-base text-neutral-600/90 hidden group-hover:block">
                     {event.description}
                   </p>
                 </div>
@@ -64,21 +64,9 @@ export default function HorizontalScroll() {
 }
 
 function PreviousEventsHeader() {
-  const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-    offset: ["start end", "end start"],
-  });
-  const x = useTransform(scrollYProgress, [0, 1], ["50%", "-30%"]);
   return (
-    <div ref={targetRef} className="px-max">
-      <motion.h1
-        style={{ x }}
-        className="absolute font-outline-4 font-bebas-neue top-0 4xl:top-10 right-0 text-[14rem] italic text-neutral-50 whitespace-nowrap"
-      >
-        Previous Events
-      </motion.h1>
-      <h1 className="font-black w-fit font-bebas-neue text-shadow-xs tracking-wide text-heading relative top-8">
+    <div  className="px-max mx-auto">
+      <h1 className="font-black w-fit font-bebas-neue text-shadow-xs tracking-wide text-heading relative top-0">
         <TextAnimate animation="blurIn" as="h1" by="character" delay={0.3}>
           Previous events
         </TextAnimate>
