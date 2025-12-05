@@ -1,15 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
 import { TextAnimate } from "./magicui/TextAnimate";
+import {PreviousEventsDataMobile} from "../lib/data/landing-page/events.data"
 
-const imgs = [
-  "/src/assets/img.jpg",
-  "/src/assets/img1.jpg",
-  "/src/assets/img2.jpg",
-  "/src/assets/img3.jpg",
-  "/src/assets/savage.jpg",
-  "/src/assets/astro.jpg",
-];
 
 const ONE_SECOND = 1000;
 const AUTO_DELAY = ONE_SECOND * 5;
@@ -33,7 +26,7 @@ const SPRING_OPTIONS = {
 
       if (x === 0) {
         setImgIndex((pv) => {
-          if (pv === imgs.length - 1) {
+          if (pv === PreviousEventsDataMobile.length - 1) {
             return 0;
           }
           return pv + 1;
@@ -47,7 +40,7 @@ const SPRING_OPTIONS = {
   const onDragEnd = () => {
     const x = dragX.get();
 
-    if (x <= -DRAG_BUFFER && imgIndex < imgs.length - 1) {
+    if (x <= -DRAG_BUFFER && imgIndex < PreviousEventsDataMobile.length - 1) {
       setImgIndex((pv) => pv + 1);
     } else if (x >= DRAG_BUFFER && imgIndex > 0) {
       setImgIndex((pv) => pv - 1);
@@ -85,7 +78,7 @@ const SPRING_OPTIONS = {
 const Images = ({ imgIndex }) => {
   return (
     <>
-      {imgs.map((imgSrc, idx) => {
+      {PreviousEventsDataMobile.map((imgSrc, idx) => {
         return (
           <motion.div
             key={idx}
@@ -109,7 +102,7 @@ const Images = ({ imgIndex }) => {
 const Dots = ({ imgIndex, setImgIndex }) => {
   return (
     <div className=" flex w-full relative -top-2  justify-center gap-2">
-      {imgs.map((_, idx) => {
+      {PreviousEventsDataMobile.map((_, idx) => {
         return (
           <button
             key={idx}

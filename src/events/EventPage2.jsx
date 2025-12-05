@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router";
-import events from "../lib/data/eventsData";
+import events from "../lib/data/events.global.data";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const EventPage = () => {

@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
 
-* {
+/* * {
     -ms-overflow-style: none;
 }
 ::-webkit-scrollbar {
@@ -12,7 +12,7 @@
 html {
   scroll-behavior: smooth;
 
-}
+} */
 body {
   overscroll-behavior: none;
 }
@@ -30,11 +30,11 @@ body {
 
 /* CUSTOM TAILWIND CLASSES */
 .px-max{
-  @apply px-3 sm:px-6 md:px-8 lg:px-10 xl:px-16 2xl:px-20 ;
+  @apply px-3 sm:px-6 md:px-8 lg:px-9 xl:px-16 2xl:px-20 ;
 }
 
 .pl-max{
-  @apply pl-4 sm:pl-6 md:pl-8 lg:pl-10 xl:px-16 2xl:pl-20 ;
+  @apply pl-4 sm:pl-6 md:pl-8 lg:pl-9 xl:px-16 2xl:pl-20 ;
 }
 
 .text-heading{

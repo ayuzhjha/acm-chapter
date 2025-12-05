@@ -7,7 +7,7 @@ import PreviousEventsMobile from "../../components/PreviousEventsMobile";
 const Events = () => {
   return (
     <div className="h-full ">
-      <div className=" h-full mx-auto text-2xl flex flex-col gap-10 ">
+      <div className=" h-full mx-auto text-2xl flex flex-col ">
         <div className="hidden md:block">
           <UpcomingEvents />
         </div>
