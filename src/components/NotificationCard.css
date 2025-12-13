@@ -1,0 +1,263 @@
+/* Notification Container - positioned relative to parent (Hero) */
+.notification-wrapper {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .notification-wrapper {
+        top: 15%;
+        /* Moved down from top */
+        bottom: auto;
+        /* Allow it to flow naturally */
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding-right: 0;
+        align-items: center;
+        pointer-events: none;
+        padding-top: 60px;
+        /* Extra spacing from header if top% isn't enough */
+    }
+}
+
+/* Animations */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-in-right {
+    animation: fadeInRight 1s ease-out forwards;
+}
+
+.fade-out {
+    animation: fadeOutRight 0.5s ease-in forwards;
+}
+
+@keyframes fadeOutRight {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+/* Card Base Styles - Matching Navbar Glassmorphism */
+/* Navbar uses: bg-white/50 border border-white/20 backdrop-blur-lg */
+.glass-card {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(16px);
+    border-radius: 20px;
+    color: rgba(0, 0, 0, 0.8);
+    /* Dark text for light background */
+    transition: 0.5s ease-in-out;
+    position: relative;
+    pointer-events: auto;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    /* overflow: hidden; Removed to allow close button to pop out */
+}
+
+.glass-card:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.6);
+}
+
+/* Standard Notification Card */
+.notification-card {
+    width: 100%;
+    max-width: 290px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+@media (max-width: 768px) {
+    .notification-card {
+        max-width: 90%;
+        /* Responsive width */
+    }
+}
+
+.card-img {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background: linear-gradient(#d7cfcf, #9198e5);
+    flex-shrink: 0;
+}
+
+.glass-card:hover>.card-img {
+    transition: 0.5s ease-in-out;
+    background: linear-gradient(#9198e5, #712020);
+}
+
+.card-text-box {
+    width: calc(100% - 70px);
+    /* Adjusted for padding */
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.card-subtitle {
+    font-size: 10px;
+    color: #4a4a4a;
+    font-weight: 600;
+}
+
+.card-desc {
+    font-size: 11px;
+    font-weight: 500;
+    color: #333;
+    margin-top: 2px;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 24px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(4px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #333;
+    font-size: 14px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 20;
+}
+
+.glass-card:hover .close-btn {
+    opacity: 1;
+}
+
+.close-btn:hover {
+    transform: scale(1.1);
+    background: rgba(220, 38, 38, 0.9);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .close-btn {
+        opacity: 1;
+        /* Always visible on mobile */
+        top: -6px;
+        right: -6px;
+        background: rgba(255, 255, 255, 0.3);
+        /* Ensure visible background */
+        color: white;
+        /* Ensure visible icon */
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+/* Event Poster Card (A4 Ratio) */
+.event-poster-card {
+    width: 100%;
+    max-width: 290px;
+    height: auto;
+    aspect-ratio: 1 / 1.414;
+    /* A4 aspect ratio */
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.event-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    opacity: 0.45;
+}
+
+.event-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.event-poster-card:hover .event-overlay {
+    opacity: 1;
+}
+
+.countdown {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Bebas Neue', sans-serif;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.view-btn {
+    padding: 6px 16px;
+    background: #ffffff;
+    color: black;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.event-poster-card:hover .view-btn {
+    transform: translateY(0);
+}
