@@ -12,7 +12,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative z-0 h-[75vh] md:h-screen w-full overflow-hidden flex flex-col items-center justify-end pb-0 md:pb-20">
+    <div className="relative z-0 h-[75vh] md:h-screen w-full overflow-y-visible overflow-x-hidden md:overflow-hidden flex flex-col items-center justify-end pb-0 md:pb-20">
 
       {/* Notifications Wrapper */}
       <div className="notification-wrapper">

@@ -56,7 +56,7 @@ function SideNavbar({ isOpen, setIsOpen }) {
 					</div>
 				</motion.div>
 
-				<div className=" grid grid-cols-1 h-fit md:grid-cols-2 sm:gap-x-20 w-[90%] uppercase font-bold text-neutral-800/90">
+				<div className="flex flex-col md:grid md:grid-cols-2 md:gap-x-20 w-full md:w-[90%] uppercase font-bold text-neutral-800/90 h-full justify-center md:h-fit">
 					{SideNavLinks.map((link, index) => (
 						<motion.a
 							onMouseEnter={() => {
@@ -72,9 +72,9 @@ function SideNavbar({ isOpen, setIsOpen }) {
 							}}
 							key={index}
 							href={link.link}
-							className={`group flex p-1 xl:p-2 3xl:p-3 4xl:p-4 items-center relative text-5xl w-fit  ${hover
-									? "md:hover:text-blue-600 md:text-neutral-500 hover:blur-none blur-[0.5px]"
-									: ""
+							className={`group flex p-4 md:p-1 xl:p-2 3xl:p-3 4xl:p-4 items-center justify-center md:justify-start relative text-4xl md:text-5xl w-full md:w-fit border-b border-neutral-300 md:border-none active:bg-neutral-200/50 md:active:bg-transparent ${hover
+								? "md:hover:text-blue-600 md:text-neutral-500 hover:blur-none blur-[0.5px]"
+								: ""
 								} transition-all ease-in-out duration-400 cursor-pointer`}
 						>
 							<span className="">{link.name}</span>
